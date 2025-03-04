@@ -1,0 +1,28 @@
+{% extends "base.html" %} {% block title %}Quark Calculator{% endblock %} {%
+block content %}
+<div class="quantum-card quark-bg">
+  <h2 class="text-center mb-4">Quark Mass-Energy Calculator</h2>
+  <div class="card p-4 shadow">
+    <form method="POST">
+      <div class="mb-3">
+        <label for="mass" class="form-label">Quark Mass (kg):</label>
+        <input
+          type="number"
+          step="1e-30"
+          class="form-control"
+          name="mass"
+          required
+        />
+      </div>
+      <button type="submit" class="btn btn-quark">Calculate</button>
+    </form>
+
+    {% if result %}
+    <div class="mt-4 result-box quark-result">
+      <h4>Result:</h4>
+      <p>{{ result }}</p>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends "base.html" %} {% block title %}Maxwell's Equations{% endblock %} {%
+block content %}
+<div class="maxwell-section">
+  <h2 class="text-center mb-4">Maxwell's Equations Calculator</h2>
+  <div class="card p-4 shadow">
+    <form method="POST">
+      <div class="row">
+        <div class="col-md-3">
+          <label for="E" class="form-label">Electric Field (E):</label>
+          <input
+            type="number"
+            step="any"
+            class="form-control"
+            name="E"
+            required
+          />
+        </div>
+        <div class="col-md-3">
+          <label for="B" class="form-label">Magnetic Field (B):</label>
+          <input
+            type="number"
+            step="any"
+            class="form-control"
+            name="B"
+            required
+          />
+        </div>
+        <div class="col-md-3">
+          <label for="rho" class="form-label">Charge Density (ρ):</label>
+          <input
+            type="number"
+            step="any"
+            class="form-control"
+            name="rho"
+            required
+          />
+        </div>
+        <div class="col-md-3">
+          <label for="J" class="form-label">Current Density (J):</label>
+          <input
+            type="number"
+            step="any"
+            class="form-control"
+            name="J"
+            required
+          />
+        </div>
+      </div>
+      <button type="submit" class="btn btn-pink mt-3">Calculate</button>
+    </form>
+
+    {% if results %}
+    <div class="mt-4">
+      <h4>Results:</h4>
+      <ul class="list-group">
+        {% for key, value in results.items() %}
+        <li class="list-group-item">
+          <strong>{{ key }}:</strong> {{ value|round(4) }}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

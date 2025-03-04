@@ -1,0 +1,31 @@
+{% extends "base.html" %} {% block content %}
+<div class="welcome-section text-center">
+  <h1 class="display-4">Quantum Physics Calculators</h1>
+  <p class="lead">
+    Explore fundamental equations in quantum mechanics and electromagnetism
+  </p>
+  <div class="row mt-5">
+    <div class="col-md-6">
+      <div class="card quantum-card quark-bg mb-4">
+        <div class="card-body">
+          <h5>Quantum Field Calculators</h5>
+          <p>
+            Calculate properties of quarks, gluons, leptons, bosons, and Higgs
+            interactions
+          </p>
+          <a href="/quantum/quark" class="btn btn-outline-light">Get Started</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card maxwell-card mb-4">
+        <div class="card-body">
+          <h5>Classical Electromagnetism</h5>
+          <p>Solve Maxwell's equations with our interactive calculator</p>
+          <a href="/maxwell" class="btn btn-pink">Explore Maxwell</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

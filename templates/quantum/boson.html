@@ -1,0 +1,28 @@
+{% extends "base.html" %} {% block title %}Boson Calculator{% endblock %} {%
+block content %}
+<div class="quantum-card boson-bg">
+  <h2 class="text-center mb-4">Boson Mass Calculator</h2>
+  <div class="card p-4 shadow">
+    <form method="POST">
+      <div class="mb-3">
+        <label for="wavelength" class="form-label">Wavelength (m):</label>
+        <input
+          type="number"
+          step="1e-12"
+          class="form-control"
+          name="wavelength"
+          required
+        />
+      </div>
+      <button type="submit" class="btn btn-boson">Calculate</button>
+    </form>
+
+    {% if result %}
+    <div class="mt-4 result-box boson-result">
+      <h4>Result:</h4>
+      <p>{{ result }}</p>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

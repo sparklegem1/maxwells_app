@@ -1,0 +1,64 @@
+body {
+    background-color: #f8f9fa;
+    color: #2c3e50;
+}
+
+/* Navbar */
+.bg-pink {
+    background-color: #e83e8c !important;
+}
+
+.nav-link.active {
+    border-bottom: 3px solid white;
+}
+
+/* Quantum Cards */
+.quantum-card {
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 2rem 0;
+    background: linear-gradient(145deg, var(--bg-start), var(--bg-end));
+}
+
+.quark-bg { --bg-start: #ff69b4; --bg-end: #ff1493; }
+.gluon-bg { --bg-start: #ff0000; --bg-end: #8b0000; }
+.lepton-bg { --bg-start: #00bfff; --bg-end: #1e90ff; }
+.boson-bg { --bg-start: #32cd32; --bg-end: #228b22; }
+.higgs-bg { --bg-start: #8a2be2; --bg-end: #4b0082; }
+
+/* Result Boxes */
+.result-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 2px solid var(--accent-color);
+}
+
+.quark-result { --accent-color: #ff69b4; }
+.gluon-result { --accent-color: #ff0000; }
+.lepton-result { --accent-color: #00bfff; }
+.boson-result { --accent-color: #32cd32; }
+.higgs-result { --accent-color: #8a2be2; }
+
+/* Buttons */
+.btn-pink {
+    background-color: #e83e8c;
+    color: white;
+    border: none;
+}
+
+.btn-pink:hover {
+    background-color: #d6336c;
+}
+
+.btn-quark { background-color: #ff69b4; color: white; }
+.btn-gluon { background-color: #ff0000; color: white; }
+.btn-lepton { background-color: #00bfff; color: white; }
+.btn-boson { background-color: #32cd32; color: white; }
+.btn-higgs { background-color: #8a2be2; color: white; }
+
+/* Maxwell Section */
+.maxwell-section .list-group-item {
+    background-color: #fff0f5;
+    border: 1px solid #e83e8c;
+}
