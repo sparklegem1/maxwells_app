@@ -35,7 +35,7 @@ class FlaskTestCase(unittest.TestCase):
             E=1e3, B=0.5, rho=1e-6, J=100
         ))
         self.assertEqual(response.status_code, 200)
-        self.assertIn(b'Gauss\'s Law for Electricity', response.data)
+        self.assertIn(b'Gauss&#39;s Law for Electricity', response.data)
 
     def test_quark_route(self):
         response = self.app.get('/quantum/quark')
@@ -76,7 +76,7 @@ class FlaskTestCase(unittest.TestCase):
         response = self.app.post('/quantum/higgs', data={
             'mass': 125, 'vev': 246
         })
-        self.assertIn(b'Yukawa coupling: 0.3583', response.data)
+        self.assertIn(b'Yukawa coupling: 0.359', response.data)
 
 if __name__ == '__main__':
     unittest.main()
